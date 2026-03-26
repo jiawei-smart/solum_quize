@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.mason: DEBUG
+  file:
+    name: logs/chart-manager.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+spring:
+  datasource:
+    url: "jdbc:sqlite::memory:"
+    driver-class-name: org.sqlite.JDBC
+    username: sa
+    password: ""
+    hikari:
+      maximum-pool-size: 1
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+      cache:
+        period: 3600
+

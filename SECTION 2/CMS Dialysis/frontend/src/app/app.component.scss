@@ -1,0 +1,33 @@
+.app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .side-nav {
+    width: 240px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    a {
+      color: #94a3b8;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      &.active-link {
+        background: #334155;
+        color: #38bdf8;
+        font-weight: bold;
+      }
+      &:hover { background: #334155; }
+    }
+  }
+  
+  .main-content {
+    flex: 1;
+    background: #f8fafc;
+    padding: 30px;
+  }
